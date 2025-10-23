@@ -93,7 +93,7 @@ async def predict(request: PredictRequest):
 async def fetch_emails(request: fetchEmailRequest):
     # Filters will be last 1 day, last 7 days, last 15 days, last 3o days
     user = "spam.detection.viit@gmail.com"
-    password = "bntgrrultakflmpe"
+    password = os.getenv("EMAIL_APP_PASSWORD")
     imap_url = "imap.gmail.com"
 
     today = datetime.now()
