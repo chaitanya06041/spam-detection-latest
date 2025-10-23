@@ -1,0 +1,265 @@
+[
+    {
+        "id": "1ae7ab70-7e3d-4ff5-b2e5-071f2ddc5508",
+        "type": "email",
+        "content": {
+            "from": "Aditya Pawar <ap7779852@gmail.com>",
+            "subject": "Spam",
+            "message": "Congratulations you have won 50,000 claim it\r\n"
+        },
+        "result": {
+            "model_prediction": "spam",
+            "gemini_prediction": {
+                "prediction": "spam",
+                "reason": "This email uses classic spam tropes: an unsolicited 'congratulations' for winning a large, unspecified sum of money, with an immediate call to action ('claim it') and no context or sender details. It's a common tactic used in phishing or scam attempts.",
+                "recommendation": "Delete immediately and do not interact with it. Do not click any links or reply.",
+                "spam_words": [
+                    "Congratulations you have won",
+                    "50,000",
+                    "claim it"
+                ]
+            }
+        },
+        "timestamp": "2025-10-07T23:09:04.202871"
+    },
+    {
+        "id": "0456eebf-33eb-4752-89df-a9fc7d5b568f",
+        "type": "email",
+        "content": {
+            "from": "Google AI Studio <googleaistudio-noreply@google.com>",
+            "subject": "Hi Spam Detection, welcome to Google AI Studio",
+            "message": "Email not displaying correctly? View it  \r\nonline<https://notifications.google.com/g/vib/AF5yWjCNlbv6s6uFygl_li0kU1Dg8nlBRTLiD3UID5lN6Avbz3UMHNt28GoInN9b0KFpWPhiKYYupfT4cJfYKZsC0x_A2D1TZQbCMVuFRVKWGC0V0PKJJBwnallHf0JimgklWMs>\r\n\r\nWelcome to Google AI Studio\r\n\r\nThe fastest path from prompt to producti"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content, including the phrase 'Welcome to Google AI Studio' and the link pointing to a legitimate Google domain (notifications.google.com), suggests it is a genuine communication from Google regarding a product announcement or onboarding. The 'Email not displaying correctly?' header is also standard for legitimate HTML emails.",
+                "recommendation": "Safe to open and review.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-18T11:04:56.558662"
+    },
+    {
+        "id": "04ae8a4f-9595-42ee-91a2-33c39c9e76f4",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "message": "[image: Google]\r\nApp password created to sign in to your account\r\n\r\n\r\nspam.detection.viit@gmail.com\r\nIf you didn't generate this password for Mail, someone might be using your\r\naccount. Check and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=spam.detecti"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "spam",
+                "reason": "This email is highly suspicious and likely a phishing attempt. The primary red flag is the truncated URL ('https://accounts.google.com/AccountChooser?Email=spam.detecti'). Legitimate security alerts from Google would never contain a broken or incomplete URL. Phishers often use legitimate-looking domains combined with truncation or slight misspellings to trick users into clicking malicious links. The urgent tone ('someone might be using your account. Check and secure your account now.') is also a common tactic in phishing emails to create panic and encourage hasty actions.",
+                "recommendation": "Delete immediately. Do NOT click on any links in this email. If you are concerned about your Google account security, go directly to Google's official website (accounts.google.com) in your browser and check your activity there.",
+                "spam_words": [
+                    "App password created",
+                    "someone might be using your account",
+                    "Check and secure your account now",
+                    "Check activity",
+                    "truncated URL"
+                ]
+            }
+        },
+        "timestamp": "2025-10-18T11:09:29.215749"
+    },
+    {
+        "id": "c33fc068-bc06-47bd-aebf-08a7e6d0a565",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "message": "[image: Google]\r\nApp password used to sign in was removed\r\n\r\n\r\nspam.detection.viit@gmail.com\r\nIf you didn't remove this password, someone might be using your account.\r\nCheck and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=spam.detection.viit@gmail.com&"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content, including the language, Google branding reference, and the explicit URL (`https://accounts.google.com/AccountChooser?...`), is consistent with a legitimate security notification from Google. The provided URL points to a genuine Google domain (`accounts.google.com`) and a known Google service, with no obvious signs of malformation or spoofing within the displayed text.",
+                "recommendation": "While the email *appears* legitimate based on its content, always exercise extreme caution with security alerts. **Do not click links directly from emails** to manage security settings. Instead, if you are concerned, manually navigate to accounts.google.com in your web browser and check your security settings directly from the official website.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-18T11:21:05.394680"
+    },
+    {
+        "id": "8f01bbf1-df61-4149-8e26-dfd73f0369b5",
+        "type": "email",
+        "content": {
+            "from": "Google AI Studio <googleaistudio-noreply@google.com>",
+            "subject": "Just shipped: New API key page, playground revamp, and more!",
+            "message": "Email not displaying correctly? View it  \r\nonline<https://notifications.google.com/g/vib/AF5yWjCL1E_Hl51Ec6GPme4SmykR64PV1mDhOtnXyen7uUBgZ4h0iW_03bwgorYvgPVTWFm6frar2IirOjlxq6LH--IFjSIpxSpUGyYEBHDQmUbHrWZpuDlk1-vCnpOQLhbj6TU>\r\n\r\nGoogle AI  \r\nStudio<https://c.gle/AF5yWjBMsR5N0TKCgzzWxMfncKZy31lMPaBAcU4fOzCTqMZE1luQYv8s7QS0Pjm7KAY3SJRVD8aijBZQjiitiGK7uBXmu28AQKEf1hLmbxr42XUVFue3EC9ET-ekaLUEwROWm7XGpIHYwcjuJNz794pFhVuDq2zbCXRLTos3obshz0Uz1NuxhhPdFQXXolJN5SUOHIKtPKg7uqyFdGIENY1mippsPJQ>\r\n\r\nScreenshot of Google AI Studio's dark-themed interface displaying available  \r\nAI models like Gemini 2.5 Pro "
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content discusses a legitimate Google product (Google AI Studio, Gemini AI models) and all provided links point to legitimate Google domains (`notifications.google.com` and `c.gle`, which is a Google URL shortener). There are no typical spam indicators such as suspicious attachments, urgent language, requests for personal information, or unsolicited offers.",
+                "recommendation": "Safe to open and click links if interested in Google AI Studio updates.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T12:06:37.283541"
+    },
+    {
+        "id": "27712ef6-246b-489d-837e-2263a1fce330",
+        "type": "email",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "hello"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content consists solely of a common greeting ('hello'). It lacks any typical spam indicators such as suspicious links, unsolicited offers, urgent requests, or unusual formatting. However, its extreme brevity and lack of context might be unusual from an unknown sender.",
+                "recommendation": "Be cautious. While not inherently spam, the extreme brevity and lack of context might warrant verifying the sender if unknown before further interaction. If from a known contact, it's likely safe to reply.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T12:07:03.733222"
+    },
+    {
+        "id": "88cefaf0-8145-4ec1-99db-6b6ce1726b4e",
+        "type": "email",
+        "content": {
+            "from": "Unknown Sender",
+            "subject": "No Subject",
+            "message": "nice"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email is extremely short and contains only a positive, neutral word 'nice' without any typical spam indicators such as suspicious links, urgent requests, financial offers, or requests for personal information. It lacks characteristics commonly associated with unsolicited or malicious communication.",
+                "recommendation": "Safe to reply, but consider the sender and context of the conversation for full clarity.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T12:11:45.145422"
+    },
+    {
+        "id": "7ae70da7-2bda-4735-b9f2-763d70c383d3",
+        "type": "email",
+        "content": {
+            "from": "Unknown Sender",
+            "subject": "No Subject",
+            "message": "nice"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email is extremely short and contains only a single, innocuous word. It lacks any typical characteristics of spam such as suspicious links, requests for personal information, urgency, or promotional content.",
+                "recommendation": "No immediate threat, but the extreme brevity and lack of context are unusual. Consider the sender and any prior communication before replying or engaging further.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T12:11:50.922186"
+    },
+    {
+        "id": "9774dceb-86e5-470b-9269-f7972462d1e2",
+        "type": "email",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "nice"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content is a single, innocuous word ('nice') with no suspicious links, attachments, urgent requests, or typical spam indicators. It could be a brief, legitimate response.",
+                "recommendation": "Safe to open and reply if you recognize the sender and context.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T12:12:50.419701"
+    },
+    {
+        "id": "028e44aa-dd95-4eb6-9ceb-627df8c15e69",
+        "type": "email",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "temporary"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "spam",
+                "reason": "The email consists solely of a single, generic word ('temporary') with no context, sender information (from the provided content), or subject line. This extreme brevity and lack of context are highly suspicious, often indicative of test emails for spam filters, attempts to verify email addresses, or vague phishing attempts designed to elicit a reply without revealing true malicious intent upfront. Legitimate communication rarely consists of just one out-of-context word.",
+                "recommendation": "Be cautious. Do not reply or click on any potential links if it were part of a larger email. Consider blocking the sender if this is an unsolicited message. Delete immediately if you do not recognize the sender.",
+                "spam_words": [
+                    "temporary"
+                ]
+            }
+        },
+        "timestamp": "2025-10-19T12:14:59.429077"
+    },
+    {
+        "id": "99756ae6-e5f3-4fe8-b56b-37e8c302b1bd",
+        "type": "email",
+        "content": {
+            "from": "Aditya Pawar <ap7779852@gmail.com>",
+            "subject": "Spam",
+            "message": "Congratulations you have won 50,000 claim it\r\n"
+        },
+        "result": {
+            "model_prediction": "spam",
+            "gemini_prediction": {
+                "prediction": "spam",
+                "reason": "The email uses classic spam tactics: an unsolicited 'winnings' notification, a large unspecified sum of money, and an urgent call to action ('claim it') without any context, sender details, or explanation of how the 'prize' was won. This is a common characteristic of prize or lottery scams.",
+                "recommendation": "Delete immediately and do not reply or click any links. Mark as junk/spam if your email client allows.",
+                "spam_words": [
+                    "Congratulations you have won",
+                    "won 50,000",
+                    "claim it"
+                ]
+            }
+        },
+        "timestamp": "2025-10-19T17:10:02.970686"
+    },
+    {
+        "id": "cc66d558-02cd-4d2f-989b-5da7b95e5f0f",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "message": "[image: Google]\r\nApp password used to sign in was removed\r\n\r\n\r\nspam.detection.viit@gmail.com\r\nIf you didn't remove this password, someone might be using your account.\r\nCheck and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=spam.detection.viit@gmail.com&continue=https://myaccount.google.com/alert/nt/1759980414556?rfn%3D269%26rfnc%3D1%26eid%3D-7453576354914350220%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and ser"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content, including the specific mention of the recipient's email address (spam.detection.viit@gmail.com) and the use of legitimate Google URLs (accounts.google.com and myaccount.google.com) for security activity and account management, strongly suggests it's a genuine security notification from Google regarding an 'App password' removal. The language and call to action are consistent with authentic security alerts.",
+                "recommendation": "Be cautious. While the email appears legitimate based on its content and links, it's always best practice to navigate directly to your Google Account security settings (e.g., by typing myaccount.google.com into your browser) and check for alerts there, rather than clicking links directly from an email, especially for security-related notifications. The truncated sentence at the end is a minor anomaly, but not enough to classify it as definite spam given the strong indicators of legitimacy.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T17:10:22.630159"
+    },
+    {
+        "id": "f05488b3-5b2e-43a7-8efb-44997b8dd91d",
+        "type": "manual",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "Hello\n"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content consists solely of a common greeting ('Hello'). Without any additional context, such as a sender, subject line, or further body text, there are no indicators of spam (e.g., suspicious links, urgent requests, financial offers, grammatical errors). It's an incomplete message, but not inherently spam based on the provided text.",
+                "recommendation": "Be cautious. While the content itself is not spam, very short, context-less emails can sometimes be precursors to phishing attempts or tests by spammers. If the sender is unknown or unexpected, do not reply or click any links if they appear in a subsequent message without verifying the sender's legitimacy.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-19T17:11:07.177952"
+    }
+]
