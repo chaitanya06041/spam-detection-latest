@@ -310,6 +310,7 @@ def predict_spam_naive(email_content: str):
 
 def save_to_json(sender: str, subject: str, email_content: str, model_output: str, gemini_analysis: dict, type: str):
     """Saves the analysis result to a JSON file."""
+    print("saving to json: ", sender, subject, email_content)
     os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
     id = str(uuid.uuid4())
     
