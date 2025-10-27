@@ -75,6 +75,9 @@ async def predict(request: PredictRequest):
             email_content = email.content
             naive_output = predict_spam_naive(email_content)
             gemini_output = predict_spam_gemini(email_content)
+            print("email: ", sender, subject, email_content)
+            print("Model Output: ", naive_output)
+            print("Gemini Output: ", gemini_output)
             save_to_json(sender, subject, email_content,naive_output, gemini_output, request.type)
             new_output = {
                 "sender": sender,
