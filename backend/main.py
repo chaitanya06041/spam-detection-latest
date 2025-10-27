@@ -69,7 +69,6 @@ class deleteHistoryRequest(BaseModel):
 @app.post('/predict')
 async def predict(request: PredictRequest):
     try: 
-        print(request)
         emails = request.emails
         outputs = []
         for email in emails:
@@ -78,9 +77,6 @@ async def predict(request: PredictRequest):
             email_content = email.content
             naive_output = predict_spam_naive(email_content)
             gemini_output = predict_spam_gemini(email_content)
-            print("email: ", sender, subject, email_content)
-            print("Model Output: ", naive_output)
-            print("Gemini Output: ", gemini_output)
             save_to_json(sender, subject, email_content,naive_output, gemini_output, request.type)
             new_output = {
                 "sender": sender,
@@ -313,7 +309,6 @@ def predict_spam_naive(email_content: str):
 
 def save_to_json(sender: str, subject: str, email_content: str, model_output: str, gemini_analysis: dict, type: str):
     """Saves the analysis result to a JSON file."""
-    print("saving to json: ", sender, subject, email_content)
     os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
     id = str(uuid.uuid4())
     
