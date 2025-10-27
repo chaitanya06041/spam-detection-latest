@@ -24,6 +24,9 @@ from typing import Optional
 
 load_dotenv()
 
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+
 app = FastAPI()
 ps = PorterStemmer()
 
