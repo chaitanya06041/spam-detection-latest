@@ -1,7 +1,6 @@
 import { Email, SpamDetectionResult, HistoryItem } from "@/types/spam";
 
-// const API_BASE_URL = 'http://localhost:8000';
-const API_BASE_URL = "https://spam-detection-latest-21tv.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_BACKEND_API_URL;
 
 interface EmailData {
   sender: string;
