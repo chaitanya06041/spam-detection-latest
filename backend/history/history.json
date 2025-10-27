@@ -105,103 +105,6 @@
         "timestamp": "2025-10-19T12:06:37.283541"
     },
     {
-        "id": "27712ef6-246b-489d-837e-2263a1fce330",
-        "type": "email",
-        "content": {
-            "from": "Manual Input",
-            "subject": "Manual Analysis",
-            "message": "hello"
-        },
-        "result": {
-            "model_prediction": "not spam",
-            "gemini_prediction": {
-                "prediction": "not spam",
-                "reason": "The email content consists solely of a common greeting ('hello'). It lacks any typical spam indicators such as suspicious links, unsolicited offers, urgent requests, or unusual formatting. However, its extreme brevity and lack of context might be unusual from an unknown sender.",
-                "recommendation": "Be cautious. While not inherently spam, the extreme brevity and lack of context might warrant verifying the sender if unknown before further interaction. If from a known contact, it's likely safe to reply.",
-                "spam_words": []
-            }
-        },
-        "timestamp": "2025-10-19T12:07:03.733222"
-    },
-    {
-        "id": "88cefaf0-8145-4ec1-99db-6b6ce1726b4e",
-        "type": "email",
-        "content": {
-            "from": "Unknown Sender",
-            "subject": "No Subject",
-            "message": "nice"
-        },
-        "result": {
-            "model_prediction": "not spam",
-            "gemini_prediction": {
-                "prediction": "not spam",
-                "reason": "The email is extremely short and contains only a positive, neutral word 'nice' without any typical spam indicators such as suspicious links, urgent requests, financial offers, or requests for personal information. It lacks characteristics commonly associated with unsolicited or malicious communication.",
-                "recommendation": "Safe to reply, but consider the sender and context of the conversation for full clarity.",
-                "spam_words": []
-            }
-        },
-        "timestamp": "2025-10-19T12:11:45.145422"
-    },
-    {
-        "id": "7ae70da7-2bda-4735-b9f2-763d70c383d3",
-        "type": "email",
-        "content": {
-            "from": "Unknown Sender",
-            "subject": "No Subject",
-            "message": "nice"
-        },
-        "result": {
-            "model_prediction": "not spam",
-            "gemini_prediction": {
-                "prediction": "not spam",
-                "reason": "The email is extremely short and contains only a single, innocuous word. It lacks any typical characteristics of spam such as suspicious links, requests for personal information, urgency, or promotional content.",
-                "recommendation": "No immediate threat, but the extreme brevity and lack of context are unusual. Consider the sender and any prior communication before replying or engaging further.",
-                "spam_words": []
-            }
-        },
-        "timestamp": "2025-10-19T12:11:50.922186"
-    },
-    {
-        "id": "9774dceb-86e5-470b-9269-f7972462d1e2",
-        "type": "email",
-        "content": {
-            "from": "Manual Input",
-            "subject": "Manual Analysis",
-            "message": "nice"
-        },
-        "result": {
-            "model_prediction": "not spam",
-            "gemini_prediction": {
-                "prediction": "not spam",
-                "reason": "The email content is a single, innocuous word ('nice') with no suspicious links, attachments, urgent requests, or typical spam indicators. It could be a brief, legitimate response.",
-                "recommendation": "Safe to open and reply if you recognize the sender and context.",
-                "spam_words": []
-            }
-        },
-        "timestamp": "2025-10-19T12:12:50.419701"
-    },
-    {
-        "id": "028e44aa-dd95-4eb6-9ceb-627df8c15e69",
-        "type": "email",
-        "content": {
-            "from": "Manual Input",
-            "subject": "Manual Analysis",
-            "message": "temporary"
-        },
-        "result": {
-            "model_prediction": "not spam",
-            "gemini_prediction": {
-                "prediction": "spam",
-                "reason": "The email consists solely of a single, generic word ('temporary') with no context, sender information (from the provided content), or subject line. This extreme brevity and lack of context are highly suspicious, often indicative of test emails for spam filters, attempts to verify email addresses, or vague phishing attempts designed to elicit a reply without revealing true malicious intent upfront. Legitimate communication rarely consists of just one out-of-context word.",
-                "recommendation": "Be cautious. Do not reply or click on any potential links if it were part of a larger email. Consider blocking the sender if this is an unsolicited message. Delete immediately if you do not recognize the sender.",
-                "spam_words": [
-                    "temporary"
-                ]
-            }
-        },
-        "timestamp": "2025-10-19T12:14:59.429077"
-    },
-    {
         "id": "99756ae6-e5f3-4fe8-b56b-37e8c302b1bd",
         "type": "email",
         "content": {
@@ -261,5 +164,176 @@
             }
         },
         "timestamp": "2025-10-19T17:11:07.177952"
+    },
+    {
+        "id": "de302186-451f-4594-a25f-2d0c94d1ec45",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Security alert",
+            "message": "[image: Google]\r\nApp password created to sign in to your account\r\n\r\n\r\nspam.detection.viit@gmail.com\r\nIf you didn't generate this password for Mail, someone might be using your\r\naccount. Check and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=spam.detection.viit@gmail.com&continue=https://myaccount.google.com/alert/nt/1760703061574?rfn%3D20%26rfnc%3D1%26eid%3D-7921714985526040793%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogl"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "This appears to be a legitimate security alert from Google. The links provided within the email direct to official Google domains (`accounts.google.com` and `myaccount.google.com`), which is a strong indicator of authenticity for security notifications.",
+                "recommendation": "If the email address `spam.detection.viit@gmail.com` is yours and you did not create an app password, click the official Google links (e.g., 'Check activity') to review your account security directly on Google's website. If this email address does not belong to you, you can safely ignore this email.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T00:29:39.095771"
+    },
+    {
+        "id": "751d22b6-5eb7-45dc-aeb0-56f63234cffe",
+        "type": "manual",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "hello"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email contains only the common greeting 'hello'. It lacks any typical spam indicators such as suspicious links, urgent requests, unusual offers, or aggressive language. However, its extreme brevity and lack of context make it unusual and potentially a probing message rather than a complete communication.",
+                "recommendation": "Be cautious. While 'hello' itself is not a spam indicator, an email with only a greeting from an unknown or unexpected sender can sometimes be a test to verify an active email address, or a precursor to a more elaborate phishing attempt. Do not reply if the sender is unknown or unexpected. If you know the sender, you might ask for more context.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T00:54:06.402057"
+    },
+    {
+        "id": "288e7ae2-e78a-4611-8ebd-6ea49e708e58",
+        "type": "manual",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "nj"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "spam",
+                "reason": "The email content is extremely short ('nj') and completely lacks context or meaningful information, which is highly unusual for a legitimate email. This extreme brevity often indicates an accidental send, a test, or a truncated message, making it suspicious and likely unwanted.",
+                "recommendation": "Delete immediately, especially if the sender is unknown. Do not reply or click on anything if it were a longer, but still suspicious, message.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T00:55:32.564532"
+    },
+    {
+        "id": "a43db690-921e-4388-aead-824554fe455f",
+        "type": "manual",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "nice"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email is extremely short and contains only a single common, benign word ('nice'). It lacks any typical indicators of spam, such as suspicious links, urgent requests, financial offers, unsolicited attachments, or grammatical errors. However, its brevity could be unusual in some contexts.",
+                "recommendation": "Be cautious. While the content itself is not spam, such a short and context-free email might warrant a moment of thought, especially if the sender is unknown. If the sender is known, it's likely a brief, legitimate message.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T00:57:22.205436"
+    },
+    {
+        "id": "afb1ed1f-8536-4d94-b82f-561589aa4943",
+        "type": "manual",
+        "content": {
+            "from": "Manual Input",
+            "subject": "Manual Analysis",
+            "message": "nice"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email consists solely of a single, common English word (\"nice\") with no other typical indicators of spam such as suspicious links, attachments, urgent requests, generic greetings, unusual formatting, or poor grammar. Without further context (sender, subject line), there is no evidence to classify it as spam.",
+                "recommendation": "Be cautious. While the content itself is not spammy, its extreme brevity and lack of context could sometimes be a precursor to a phishing attempt or simply an incomplete message. If you don't recognize the sender or if the message is unexpected, consider replying cautiously to seek clarification or verify the sender's identity. If you recognize the sender and a short message is typical, it's likely safe.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T00:58:31.173591"
+    },
+    {
+        "id": "730a9bd8-88b3-4c09-8110-3d8314d5da15",
+        "type": "email",
+        "content": {
+            "from": "Twilio Customer Experience <customerexperience@survey.twilio.com>",
+            "subject": "Share some quick feedback?",
+            "message": "<https://www.twilio.com/> Hi Spam Detection,\r\n\r\nTo help Twilio provide you the best experience possible, we'd like your help\r\nwith this very brief survey.\r\n\r\n\r\n\r\nOn a scale from 0-10, how likely are you to recommend Twilio to a friend or\r\ncolleague? Not at all likely Extremely likely 0\r\n<https://surveys.twilio.com/jfe/form/SV_6g8060mWx11oOMt?Q_DL=KAVklYeNscGeanx_6g8060mWx11oOMt_CGC_DIam9VCdcHYM513&Q_CHL=email&Q_PopulateResponse=%7B%22QID1%22:%220%22%7D&Q_PopulateValidate=1&invite_date=10/20/25\r\n8:17 AM IST&NPS_score=0> 1\r\n<https://surveys.twilio.com/jfe/form/SV_6g8060mWx11oOMt?Q_DL=KAVklYeNscG"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email is a survey request from Twilio, a legitimate company. The links provided point to official Twilio domains (www.twilio.com and surveys.twilio.com), which is a strong indicator of legitimacy. The content and tone are professional and consistent with a standard customer feedback survey.",
+                "recommendation": "Safe to click links and participate in the survey if you wish. It appears to be a legitimate request from Twilio.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T01:14:34.830438"
+    },
+    {
+        "id": "953885af-ee30-4885-8922-583fd5b80ec8",
+        "type": "email",
+        "content": {
+            "from": "Google AI Studio <googleaistudio-noreply@google.com>",
+            "subject": "Just shipped: New API key page, playground revamp, and more!",
+            "message": "Email not displaying correctly? View it  \r\nonline<https://notifications.google.com/g/vib/AF5yWjCL1E_Hl51Ec6GPme4SmykR64PV1mDhOtnXyen7uUBgZ4h0iW_03bwgorYvgPVTWFm6frar2IirOjlxq6LH--IFjSIpxSpUGyYEBHDQmUbHrWZpuDlk1-vCnpOQLhbj6TU>\r\n\r\nGoogle AI  \r\nStudio<https://c.gle/AF5yWjBMsR5N0TKCgzzWxMfncKZy31lMPaBAcU4fOzCTqMZE1luQYv8s7QS0Pjm7KAY3SJRVD8aijBZQjiitiGK7uBXmu28AQKEf1hLmbxr42XUVFue3EC9ET-ekaLUEwROWm7XGpIHYwcjuJNz794pFhVuDq2zbCXRLTos3obshz0Uz1NuxhhPdFQXXolJN5SUOHIKtPKg7uqyFdGIENY1mippsPJQ>\r\n\r\nScreenshot of Google AI Studio's dark-themed interface displaying available  \r\nAI models like Gemini 2.5 Pro "
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content references legitimate Google products (Google AI Studio, Gemini 2.5 Pro) and the embedded links point to authentic Google domains (`notifications.google.com` and `c.gle`, which is a Google-owned URL shortener). The language is professional and consistent with a product announcement or update.",
+                "recommendation": "Safe to open and interact with, as it appears to be a legitimate communication from Google.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T01:14:40.713402"
+    },
+    {
+        "id": "6fef629a-96ec-4a0f-b509-0ebf69573e32",
+        "type": "email",
+        "content": {
+            "from": "Twilio Customer Experience <customerexperience@survey.twilio.com>",
+            "subject": "Share some quick feedback?",
+            "message": "<https://www.twilio.com/> Hi Spam Detection,\r\n\r\nTo help Twilio provide you the best experience possible, we'd like your help\r\nwith this very brief survey.\r\n\r\n\r\n\r\nOn a scale from 0-10, how likely are you to recommend Twilio to a friend or\r\ncolleague? Not at all likely Extremely likely 0\r\n<https://surveys.twilio.com/jfe/form/SV_6g8060mWx11oOMt?Q_DL=KAVklYeNscGeanx_6g8060mWx11oOMt_CGC_DIam9VCdcHYM513&Q_CHL=email&Q_PopulateResponse=%7B%22QID1%22:%220%22%7D&Q_PopulateValidate=1&invite_date=10/20/25\r\n8:17 AM IST&NPS_score=0> 1\r\n<https://surveys.twilio.com/jfe/form/SV_6g8060mWx11oOMt?Q_DL=KAVklYeNscG"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email originates from Twilio (indicated by links to twilio.com and surveys.twilio.com, which are legitimate domains). It requests participation in a standard customer satisfaction survey (NPS) and contains no suspicious language, urgent calls to action, or requests for sensitive personal information beyond the survey responses.",
+                "recommendation": "Safe to click on the survey links if you are a Twilio customer and wish to provide feedback. Be cautious if you do not have an existing relationship with Twilio, but based on the content alone, it appears legitimate.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T01:15:41.516152"
+    },
+    {
+        "id": "37e77ea2-a8bc-4eb0-aabf-0d4824879f78",
+        "type": "email",
+        "content": {
+            "from": "Google AI Studio <googleaistudio-noreply@google.com>",
+            "subject": "Just shipped: New API key page, playground revamp, and more!",
+            "message": "Email not displaying correctly? View it  \r\nonline<https://notifications.google.com/g/vib/AF5yWjCL1E_Hl51Ec6GPme4SmykR64PV1mDhOtnXyen7uUBgZ4h0iW_03bwgorYvgPVTWFm6frar2IirOjlxq6LH--IFjSIpxSpUGyYEBHDQmUbHrWZpuDlk1-vCnpOQLhbj6TU>\r\n\r\nGoogle AI  \r\nStudio<https://c.gle/AF5yWjBMsR5N0TKCgzzWxMfncKZy31lMPaBAcU4fOzCTqMZE1luQYv8s7QS0Pjm7KAY3SJRVD8aijBZQjiitiGK7uBXmu28AQKEf1hLmbxr42XUVFue3EC9ET-ekaLUEwROWm7XGpIHYwcjuJNz794pFhVuDq2zbCXRLTos3obshz0Uz1NuxhhPdFQXXolJN5SUOHIKtPKg7uqyFdGIENY1mippsPJQ>\r\n\r\nScreenshot of Google AI Studio's dark-themed interface displaying available  \r\nAI models like Gemini 2.5 Pro "
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content refers to legitimate Google products (Google AI Studio, Gemini 2.5 Pro) and the embedded links point to official Google domains (notifications.google.com and c.gle, which is a Google shortlink domain). There are no common indicators of spam such as urgent requests, suspicious offers, or poor grammar.",
+                "recommendation": "Safe to view and interact with. This appears to be an official communication from Google.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-10-25T01:15:48.003064"
     }
 ]

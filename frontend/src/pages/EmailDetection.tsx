@@ -24,6 +24,16 @@ const EmailDetection = () => {
     try {
       const filter = `${timeFilter}d`;
       const fetchedEmails = await fetchEmails(filter);
+
+      if (fetchedEmails.length === 0) {
+        toast({
+          title: "No Emails Found",
+          description: `No emails found for the last ${timeFilter} day(s).`,
+          variant: "destructive",
+        });
+        return;
+      }
+
       setEmails(fetchedEmails);
       setPredictions(new Map());
       toast({
@@ -65,6 +75,20 @@ const EmailDetection = () => {
   const filteredEmails = emails.filter((email) =>
     email.from.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleSelectAll = () => {
+    const allSelected = filteredEmails.length > 0 && filteredEmails.every(e => e.selected);
+    const filteredEmailIds = new Set(filteredEmails.map(e => e.id));
+
+    setEmails(prevEmails => 
+      prevEmails.map(email => {
+        if (filteredEmailIds.has(email.id)) {
+          return { ...email, selected: !allSelected };
+        }
+        return email;
+      })
+    );
+  };
 
   const handlePredict = async () => {
     const selectedEmails = emails.filter((e) => e.selected);
@@ -173,7 +197,12 @@ const EmailDetection = () => {
         <>
           <Card>
             <CardHeader>
-              <CardTitle>Select Emails to Analyze</CardTitle>
+              <div className="flex justify-between items-center">
+                <CardTitle>Select Emails to Analyze</CardTitle>
+                <Button variant="outline" size="sm" onClick={handleSelectAll}>
+                  {filteredEmails.length > 0 && filteredEmails.every(e => e.selected) ? "Deselect All" : "Select All"}
+                </Button>
+              </div>
             </CardHeader>
             <CardContent className="space-y-3">
               {filteredEmails.map((email) => {

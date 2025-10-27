@@ -123,7 +123,8 @@ async def fetch_emails(request: fetchEmailRequest):
 
     email_ids = data[0].split()
     if not email_ids:
-        return {"message": "No emails found in this date range"}
+        mail.logout()
+        return {"emails": []}
 
     # --- Get latest 10 emails ---
     latest_ids = email_ids[-10:]

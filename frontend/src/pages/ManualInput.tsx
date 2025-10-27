@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { FileText, Send } from "lucide-react";
+import { FileText, RefreshCw, Send } from "lucide-react";
 import { predictSpam } from "@/lib/api";
 import PredictionResult from "@/components/PredictionResult";
 import { toast } from "@/hooks/use-toast";
 
 const ManualInput = () => {
   const [message, setMessage] = useState("");
+  const [isPredicting, setIsPredicting] = useState(false);
   const [prediction, setPrediction] = useState<any>(null);
 
   const handlePredict = async () => {
@@ -21,13 +22,16 @@ const ManualInput = () => {
       return;
     }
 
+    setIsPredicting(true);
     try {
-      const emailData = [{
-        sender: "Manual Input",
-        subject: "Manual Analysis",
-        content: message,
-      }];
-      const type = "manual"
+      const emailData = [
+        {
+          sender: "Manual Input",
+          subject: "Manual Analysis",
+          content: message,
+        },
+      ];
+      const type = "manual";
 
       const results = await predictSpam(emailData, type);
       const result = results.get("Manual InputManual Analysis");
@@ -45,6 +49,9 @@ const ManualInput = () => {
         description: "Failed to analyze message. Please try again.",
         variant: "destructive",
       });
+    }
+    finally {
+      setIsPredicting(false);
     }
   };
 
@@ -76,9 +83,22 @@ const ManualInput = () => {
             className="min-h-[200px]"
           />
           <div className="flex gap-3">
-            <Button onClick={handlePredict} className="flex-1">
-              <Send className="mr-2 h-4 w-4" />
-              Analyze Message
+            <Button
+              onClick={handlePredict}
+              disabled={isPredicting}
+              className="flex-1"
+            >
+              {isPredicting ? (
+                <>
+                  <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                  Analyzing...
+                </>
+              ) : (
+                <>
+                  <Send className="mr-2 h-4 w-4" />
+                  Analyze Message
+                </>
+              )}
             </Button>
             <Button variant="outline" onClick={handleClear}>
               Clear

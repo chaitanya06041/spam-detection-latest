@@ -331,8 +331,8 @@ const History = () => {
                             {item.type === "email" ? "Email" : "Manual"}
                           </Badge>
                           <Badge
-                            variant={item.result.model_prediction === "spam" ? "destructive" : "default"}
-                            className={item.result.model_prediction !== "spam" ? "bg-success hover:bg-success" : ""}
+                            variant={item.result.gemini_prediction.prediction === "spam" ? "destructive" : "default"}
+                            className={item.result.gemini_prediction.prediction !== "spam" ? "bg-success hover:bg-success" : ""}
                           >
                             {item.result.model_prediction}
                           </Badge>
