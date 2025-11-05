@@ -69,6 +69,7 @@ class deleteHistoryRequest(BaseModel):
 @app.post('/predict')
 async def predict(request: PredictRequest):
     try: 
+        whatsapp_message = "Here is the result of your recent email analysis:\n"
         emails = request.emails
         outputs = []
         for email in emails:
@@ -85,7 +86,14 @@ async def predict(request: PredictRequest):
                 "gemini_output": gemini_output
             }
             outputs.append(new_output)
+        
+        for i in range(len(outputs)):
+            whatsapp_message += f"{i+1}. Sender: {outputs[i]['sender']}\n"
+            whatsapp_message += f"  Subject: {outputs[i]['subject']}\n"
+            whatsapp_message += f"  Result: {outputs[i]['gemini_output']['prediction']}\n"
+            whatsapp_message += "\n"
 
+        send_whatsapp_message(whatsapp_message, os.getenv("TO_WHATSAPP_NUMBER"))
         return outputs
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -249,7 +257,6 @@ async def get_history():
     return {"history": data}
 
 
-# ---------- Helper Functions ----------
 
 
 
@@ -259,8 +266,9 @@ async def get_history():
 
 
 
-
-
+# ==================================================================================
+# ---------- Helper Functions ----------                                           |
+# ==================================================================================
 
 def predict_spam_gemini(email_content: str):
     """
@@ -342,6 +350,21 @@ def save_to_json(sender: str, subject: str, email_content: str, model_output: st
     with open(JSON_PATH, "w") as f:
         json.dump(records, f, indent=4)
 
+
+def send_whatsapp_message(message: str, to_number: str):
+    account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+    auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+    from_whatsapp = os.getenv("TWILIO_WHATSAPP_NUMBER")
+    client = Client(account_sid, auth_token)
+    try:
+        msg = client.messages.create(
+            from_=from_whatsapp,
+            body=message,
+            to=to_number
+        )
+        print("Whatsapp message sent to", to_number)
+    except Exception as e:
+        print(f"Failed to send message: {e}")
 
 if __name__ == "__main__":
     import uvicorn

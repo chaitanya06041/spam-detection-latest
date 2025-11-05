@@ -335,5 +335,102 @@
             }
         },
         "timestamp": "2025-10-25T01:15:48.003064"
+    },
+    {
+        "id": "483a8cda-73b2-445b-b3b4-4a4531a673a9",
+        "type": "manual",
+        "content": {
+            "from": "",
+            "subject": "",
+            "message": "Hello, Good Morning"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content consists only of a polite and generic greeting ('Hello, Good Morning'). There are no suspicious links, attachments, urgent requests, unusual formatting, or common spam keywords present in this short phrase.",
+                "recommendation": "Be cautious. While the provided text itself is not spam, such a short and generic greeting could be the first line of a phishing attempt or an unsolicited message. Do not reply or click any links if the sender is unknown or unexpected.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-11-05T10:21:27.226406"
+    },
+    {
+        "id": "06a2c482-9c55-4711-8227-a2c624443938",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Help strengthen the security of your Google Account",
+            "message": "[image: Google]\r\n\r\n\r\n\r\nRemove access from devices you don't use anymore\r\n\r\n\r\nspam.detection.viit@gmail.com\r\n\r\n\r\nYou haven't used your Google Account on your Vivo iQOO Z6 Pro in a while.\r\nYou should only stay signed in on devices that you use and trust.\r\nMake sure your account is no longer on this device and see other\r\npersonalized recommendations in the Security Checkup\r\n<https://accounts.google.com/AccountChooser?Email=spam.detection.viit@gmail.com&continue=https://myaccount.google.com/security-checkup?utm_source%3Dgoogle%26utm_medium%3Demail%26utm_campaign%3Dsap%26aneid%3D-352382096588887969"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "This email appears to be a legitimate security notification from Google. It provides standard security advice, mentions a specific device associated with the account, and the embedded links point to official Google domains (`accounts.google.com` and `myaccount.google.com`) for security checkup.",
+                "recommendation": "Safe to review. You can click the link to manage your Google account's security settings, but as a general best practice, always verify the sender and the full URL before clicking links in any email.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-11-05T10:27:48.798938"
+    },
+    {
+        "id": "45daf671-46d8-4849-9b1e-b1462ecfdd98",
+        "type": "email",
+        "content": {
+            "from": "Aditya Pawar <ap7779852@gmail.com>",
+            "subject": "",
+            "message": "Your OTP is 956181. Use this to verify your mobile number on Zepto. Valid\r\nfor 5 minutes. BsISnWdUg0y\r\n"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email content is formatted like a standard One-Time Password (OTP) message for a legitimate service (Zepto), including a clear code and expiration time. This is typical for transactional messages.",
+                "recommendation": "Be extremely cautious. If you *did not* initiate a mobile number verification on Zepto, do not use this OTP or share it with anyone. This could indicate someone else is trying to access your account. If you *did* initiate the verification, then it is likely legitimate.",
+                "spam_words": [
+                    "BsISnWdUg0y"
+                ]
+            }
+        },
+        "timestamp": "2025-11-05T10:28:03.056703"
+    },
+    {
+        "id": "3f681035-2f5e-4ebf-a7dc-b2d74f89d689",
+        "type": "email",
+        "content": {
+            "from": "Google <no-reply@accounts.google.com>",
+            "subject": "Help strengthen the security of your Google Account",
+            "message": "[image: Google]\r\n\r\n\r\n\r\nRemove access from devices you don't use anymore\r\n\r\n\r\nspam.detection.viit@gmail.com\r\n\r\n\r\nYou haven't used your Google Account on your Vivo iQOO Z6 Pro in a while.\r\nYou should only stay signed in on devices that you use and trust.\r\nMake sure your account is no longer on this device and see other\r\npersonalized recommendations in the Security Checkup\r\n<https://accounts.google.com/AccountChooser?Email=spam.detection.viit@gmail.com&continue=https://myaccount.google.com/security-checkup?utm_source%3Dgoogle%26utm_medium%3Demail%26utm_campaign%3Dsap%26aneid%3D-352382096588887969"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email appears to be a legitimate security notification from Google. The embedded links point to official Google domains (accounts.google.com and myaccount.google.com), and the content is specific to Google account security, mentioning a particular device model. There are no suspicious grammatical errors or typical spamming tactics.",
+                "recommendation": "Safe to review. While the links appear legitimate, it's always good practice to hover over any links to confirm their destination before clicking, or navigate directly to your Google Security Checkup via your browser.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-11-05T10:33:26.309598"
+    },
+    {
+        "id": "7e768139-3a19-4784-81c2-638ff282757d",
+        "type": "email",
+        "content": {
+            "from": "Aditya Pawar <ap7779852@gmail.com>",
+            "subject": "",
+            "message": "Your OTP is 956181. Use this to verify your mobile number on Zepto. Valid\r\nfor 5 minutes. BsISnWdUg0y\r\n"
+        },
+        "result": {
+            "model_prediction": "not spam",
+            "gemini_prediction": {
+                "prediction": "not spam",
+                "reason": "The email appears to be a legitimate transactional message, providing a One-Time Password (OTP) for a known service (Zepto) with a specified validity period. It lacks common spam indicators such as unsolicited offers, suspicious links, or grammatical errors. This format is typical for account verification or login processes.",
+                "recommendation": "Be cautious. Only use this OTP if you specifically initiated a request to verify your mobile number on Zepto. If you did not request this OTP, do not use it, and consider checking your Zepto account for unusual activity or contacting their support.",
+                "spam_words": []
+            }
+        },
+        "timestamp": "2025-11-05T10:33:33.129240"
     }
 ]
